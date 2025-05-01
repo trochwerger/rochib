@@ -1,28 +1,29 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Image } from "react-bootstrap";
+import SimpleAccordion from "@/components/SimpleAccordian";
+import { Container } from "react-bootstrap";
+import { Box } from "@chakra-ui/react";
 
-export default function services() {
+export default function Services() {
   return (
     <>
-      <Row>
-        <Col md={6}>
-          <h4>Construction Consulting</h4>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Go
-          </button>
-        </Col>
-        <Col md={6}>
-          <h4>Equipment</h4>
-          <p>
-            When you choose RochIB, you&apos;re choosing reliability, expertise,
-            and integrity. With years of industry experience and a reputation
-            for excellence, we have earned the trust of clients across diverse
-            sectors. From concept to completion, we&apos;re with you every step
-            of the way, ensuring that your project is delivered on time, within
-            budget, and to the highest standards of quality.
-          </p>
-        </Col>
-      </Row>
+      <Box>
+        <Row>
+          <Col md={6}>
+            <h4>Our Services</h4>
+            <p>
+              With a dynamic and flexible approach, we discuss with our clients
+              their needs, find the best technologies that fit their
+              requirements and culture, and design a strategy to implement their
+              goals.
+            </p>
+            <SimpleAccordion />
+          </Col>
+          <Col md={6}>
+            <Image src="/homeBackground1.jpg" alt="Aesthetic" fluid />
+          </Col>
+        </Row>
+      </Box>
     </>
   );
 }
